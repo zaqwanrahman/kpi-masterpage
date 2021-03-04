@@ -1,0 +1,68 @@
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    font-size: 13px;
+}
+
+
+/* ---------------------------------------------------
+    FREEZE SIDE TABLE LEFT SECTION
+----------------------------------------------------- */
+
+.table-freeze {
+  position: relative;
+  width:100%;
+  z-index: 1;
+  margin: auto;
+  overflow: auto;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.table-freeze table {
+  width: 100%;
+  min-width: 1280px;
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+
+}
+
+.table-freeze th,
+.table-freeze td {
+  padding: 5px 10px;
+  border: 1px solid #000;
+  background: #fff;
+}
+
+.table-freeze thead th {
+  background-color: #212529;
+  color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.select:nth-child(-n+4) {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  
+}
+.select:nth-child(-n+4) {
+  z-index: 4;
+}
+
+tbody td:nth-child(-n+4) {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: white;
+}
+
+
+ 

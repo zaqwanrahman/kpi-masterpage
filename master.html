@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Master</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Our Custom CSS and JS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mastertable.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Default checkbox
+  </label>
+</div>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" >
+            <div class="sidebar-header ">
+                <h3>KPI Management</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <h5 class="m-3">Menu Utama</h5>
+
+                <li class="">
+                    <a href="utama.html" ><span class="fa fa-home mr-3"></span> Utama</a>
+                </li>
+
+                <li class="active font-weight-bold">
+                    <a href="master.html" ><span class="fa fa-briefcase mr-3"></span> Master KPI</a>
+                </li>
+
+                <li class=""> 
+                    <a href="penilaian.html" ><span class="fas fa-users mr-3"></span>Kecekapan Pekerja</a>
+                </li>
+
+            </ul>
+
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#"><span class="fas fa-sign-out-alt mr-3"></span> Log Keluar</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link font-weight-bold">MUHAMMAD AMIRUL ZAQWAN</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </nav>
+
+            <!-- New Tabs Button -->
+            <div class="float-right pb-2">
+                <button type="button" class="btn btn-simpan">Simpan Pencapaian</button>
+                <button type="button" class="btn btn-hantar">Hantar Pencapaian</button>
+            </div>
+
+            <h2>Kad Skor - <span>2020</span> </h2>
+
+            <caption>Bulan : <span class="font-weight-bold" >November</span></caption>
+
+            <br><br>
+            
+            <input id="counter" type="hidden" value="0">
+
+            <!-- Navs Tab -->
+            <ul class="nav nav-tabs font-weight-bold tabs-menu" id="tab-list" role="tablist">
+                       
+              <li class="nav-item" >
+                <a class="nav-link active" data-toggle="tab" href="#master" role="tab">Master</a>
+              </li>
+
+            </ul> 
+
+            <!-- Navs Tab Content -->
+    <div class="tab-content tabs-area" id="tab-content ">
+
+        
+        <div class="tab-pane fade show active" id="master" ><br>
+
+            <table class="table table-bordered sticky-top bg-light bg-gradient text-dark">
+                <tr>
+                    <th class="w-25" >Gred : 
+                        <input class="font-weight-bold" id="status" name="status" value="NO GRED" disabled>
+                        <input class="font-weight-bold" id="percentage-color" disabled>
+                    </th>
+                    <th class="w-25" >Overall Score : 
+                        <input class="font-weight-bold" id="percentage-total"  value="0" disabled>
+                    </th>
+                    <th class="w-25" >Total Weightage : 
+                        <input class="font-weight-bold w-25" id="percentage-weightage" name="weightage" value="0" disabled>
+                    </th>
+                </tr>
+            </table>
+
+              <div class="float-right pb-2">
+                <button type="button" class="btn btn-pencapaian" id="add" >Tambah Pencapaian</button>
+              </div>
+
+                <div class="table-freeze">
+                    <table id="master">
+                        <thead>
+                          <tr>
+                            <th class="select" rowspan="2">Fungsi</th>
+                            <th class="select" rowspan="2">Objektif KPI</th>
+                            <th class="select" rowspan="2">Metrik/Bukti</th>
+                            <th rowspan="2">Ukuran</th>
+                            <th rowspan="2">Peratus (%)</th>
+                            <th colspan="3">KPI Targets</th>
+                            <th rowspan="2">Pencapaian</th>
+                            <th rowspan="2">Skor KPIdasdada</th>
+                            <th rowspan="2">Skor Sebenar</th>
+                            <th rowspan="2"><i class="fa fa-cogs" style="font-size: 26px; width: auto;"></i></th>
+                          </tr>
+                          <tr>
+                            <th scope="col" >Threshold</th>
+                            <th scope="col" >Base</th>
+                            <th scope="col" >Stretch</th>
+                          </tr>
+                      </thead>
+                      <tbody class="append-area" >
+                          <!-- Display Body --> 
+                      </tbody>
+                    </table>
+                    <!-- <input id="counter" type="hidden" value="0"> -->
+                </div>
+                
+        </div>
+
+    </div>
+            
+</div>
+
+       
+
+    </div>
+
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- New Tabs -->
+    <!-- <script src="js/tab.js"></script> -->
+
+   <!-- Calculation JS -->
+    <script src="js/master.js"></script>
+
+    <!-- Save JS -->
+    <!-- <script src="js/savecontrol.js"></script> -->
+
+</body>
+
+</html>
